@@ -1,0 +1,75 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a sample server",
+        "title": "Swagger Example API",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {},
+        "license": {},
+        "version": "1.0"
+    },
+    "host": "petstore.swagger.io",
+    "basePath": "/v2",
+    "paths": {
+        "/testapi/get-struct-package1-foo": {
+            "get": {
+                "description": "get struct package1.data.Foo",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "operationId": "get-struct-package1-foo",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "$ref": "#/definitions/package1.data.Foo"
+                        }
+                    }
+                }
+            }
+        },
+        "/testapi/get-struct-package2-foo": {
+            "get": {
+                "description": "get struct package2.data.Foo",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "operationId": "get-struct-package2-foo",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "$ref": "#/definitions/package2.data.Foo"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "package1.data.Foo": {
+            "type": "object",
+            "properties": {
+                "package1field1": {
+                    "type": "string"
+                }
+            }
+        },
+        "package2.data.Foo": {
+            "type": "object",
+            "properties": {
+                "package2field1": {
+                    "type": "string"
+                },
+            }
+        }
+    }
+}
